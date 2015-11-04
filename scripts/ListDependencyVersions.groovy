@@ -8,7 +8,7 @@ import grails.util.BuildSettings
 
 includeTargets << grailsScript("_GrailsSettings")
 
-USAGE = """
+USAGE = '''
 Usage: grails list-dependency-versions -group=(scopes|combined) -filter=(multiple|single)
 -group=(scopes|combined)
     scopes     - Display dependencies grouped by scopes
@@ -26,7 +26,7 @@ But you may have different plugins in different scopes with different subdepende
 And one of the subdependency may has different versions in different scopes.
 If there many usages of one of the dependency then you'll see that versions.
 
-"""
+'''
 
 target(pluginVersion: "List all plugin versions used by your app") {
     (scopes, multiple) = parseAndCheckCmdLineArgs()
