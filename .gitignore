@@ -1,0 +1,15 @@
+# Idea
+.idea/
+*.iml
+*.ipr
+
+# Eclipe
+.project
+.classpath
+
+# Java
+*.class
+
+# Grails
+target/
+
