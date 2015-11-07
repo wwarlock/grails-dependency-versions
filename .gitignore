@@ -1,3 +1,5 @@
+.DS_Store
+
 # Idea
 .idea/
 *.iml
@@ -11,5 +13,8 @@
 *.class
 
 # Grails
-target/
-
+grails-list-dependency-versions-*.zip
+grails-list-dependency-versions-*.zip.sha1
+plugin.xml
+target
+web-app

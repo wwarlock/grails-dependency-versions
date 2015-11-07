@@ -45,7 +45,7 @@ The dependency versions are
 """
 }
 
-private LinkedHashMap combineAndFilterList(boolean scopes, boolean multiple, def depsByScope) {
+private LinkedHashMap combineAndFilterList(boolean scopes, boolean multiple, depsByScope) {
     if (scopes && !multiple) return depsByScope
     if (!scopes) {
         depsByScope = combineScopesToSingleList(depsByScope)
@@ -57,7 +57,7 @@ private LinkedHashMap combineAndFilterList(boolean scopes, boolean multiple, def
 }
 
 private void printDependencyReport(LinkedHashMap depList) {
-    depList.each { String scope_name, def deps ->
+    depList.each { String scope_name, deps ->
         def comment = BuildSettings.SCOPE_TO_DESC[scope_name]
         if (comment) { comment = " ($comment)" } else { comment = "" }
         println "--> Scope `$scope_name`$comment:\n"
@@ -99,7 +99,6 @@ $errorMessage
 $USAGE
 """
 }
-
 
 private ByteArrayOutputStream getFullDependenciesTreeByScope(depManager) {
     final PrintStream originOut = System.out
